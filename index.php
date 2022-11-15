@@ -8,11 +8,18 @@ require_once('php/cache.inc.php');
     <title>Bugopolis</title>
     <link rel="stylesheet" href="<?= getCacheUrl('css/common.css'); ?>" type="text/css"/>
     <script type="text/javascript" src="<?= getCacheUrl('js/main.js'); ?>"></script>
+    <script type="text/javascript" src="<?= getCacheUrl('js/timer.js'); ?>"></script>
+    <script type="text/javascript" src="<?= getCacheUrl('js/viewport.js'); ?>"></script>
+    <script type="text/javascript" src="<?= getCacheUrl('js/stage.js'); ?>"></script>
+    <script type="text/javascript" src="<?= getCacheUrl('js/actor.js'); ?>"></script>
+    <script type="text/javascript" src="<?= getCacheUrl('js/wanderer.js'); ?>"></script>
     <script type="text/javascript">
         document.addEventListener('DOMContentLoaded', onReady, false);
     </script>
 </head>
 <body>
+<canvas id="gameCanvas">
 
+</canvas>
 </body>
 </html>
