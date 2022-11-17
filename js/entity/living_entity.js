@@ -1,7 +1,7 @@
 /**
- * An actor that has animated parts and can move around.
+ * An entity that has animated parts and can move around.
  */
-class LivingActor extends PhysicalActor {
+class LivingEntity extends PhysicalEntity {
     #brain = null;
 
     setBrain(brain) {

@@ -1,7 +1,7 @@
 /**
- * An actor that has a physical presence on a Stage.
+ * An entity that has a physical presence in a World.
  */
-class PhysicalActor extends Actor {
+class PhysicalEntity extends Entity {
     #location = new Vector();
 
     getLocation() {

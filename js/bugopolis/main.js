@@ -1,6 +1,6 @@
 let _globalContext = {
     viewport: null,
-    stage: null,
+    world: null,
     player: null,
     tickTimer: null,
     keyboard: null
@@ -10,10 +10,10 @@ function onReady() {
     // Initialize main game components
     let canvas = document.getElementById('gameCanvas');
     _globalContext.viewport = new Viewport(canvas);
-    _globalContext.stage = new Stage();
+    _globalContext.world = new World();
 
     // Hook up components
-    _globalContext.viewport.setStage(_globalContext.stage);
+    _globalContext.viewport.setWorld(_globalContext.world);
 
     // Add player-controlled Mantis
     _globalContext.keyboard = new Keyboard();
@@ -22,7 +22,7 @@ function onReady() {
     let playerMantis = new Mantis();
     playerMantis.getLocation().setY(100);
     playerMantis.setBrain(_globalContext.player);
-    _globalContext.stage.addActor(playerMantis);
+    _globalContext.world.addEntity(playerMantis);
 
     // Set up tick loop
     _globalContext.tickerTimer = new Timer(onTick, 50);
@@ -40,7 +40,7 @@ function onCanvasResize() {
 }
 
 function onTick() {
-    _globalContext.stage.tick();
+    _globalContext.world.tick();
 }
 
 function onBlur() {

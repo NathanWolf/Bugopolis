@@ -1,5 +1,5 @@
 /**
- * An abstract brain that controls a LivingActor.
+ * An abstract brain that controls a LivingEntity.
  */
 class Brain {
     getDirection() {

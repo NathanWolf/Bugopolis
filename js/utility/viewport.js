@@ -4,7 +4,7 @@
 class Viewport {
     #canvas = null;
     #context = null;
-    #stage = null;
+    #world = null;
 
     constructor(canvas) {
         this.#canvas = canvas;
@@ -24,8 +24,8 @@ class Viewport {
         this.#scheduleRedraw();
     }
 
-    setStage(stage) {
-        this.#stage = stage;
+    setWorld(world) {
+        this.#world = world;
     }
 
     #scheduleRedraw() {
@@ -42,10 +42,10 @@ class Viewport {
         context.globalCompositeOperation = 'destination-over';
         context.clearRect(0, 0, this.#canvas.width, this.#canvas.height);
 
-        // Render all actors in view
-        if (this.#stage == null) return;
+        // Render all entities in view
+        if (this.#world == null) return;
 
-        let actors = this.#stage.getActorsInView(this);
-        actors.forEach(function(actor) { actor.draw(context); });
+        let entities = this.#world.getEntitiesInView(this);
+        entities.forEach(function(entity) { entity.draw(context); });
     }
 }

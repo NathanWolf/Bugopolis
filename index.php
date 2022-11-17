@@ -12,13 +12,13 @@ require_once('php/cache.inc.php');
     <script type="text/javascript" src="<?= getCacheUrl('js/utility/timer.js'); ?>"></script>
     <script type="text/javascript" src="<?= getCacheUrl('js/utility/keyboard.js'); ?>"></script>
     <script type="text/javascript" src="<?= getCacheUrl('js/utility/viewport.js'); ?>"></script>
-    <script type="text/javascript" src="<?= getCacheUrl('js/stage/stage.js'); ?>"></script>
-    <script type="text/javascript" src="<?= getCacheUrl('js/actor/actor.js'); ?>"></script>
-    <script type="text/javascript" src="<?= getCacheUrl('js/actor/brain/brain.js'); ?>"></script>
-    <script type="text/javascript" src="<?= getCacheUrl('js/actor/brain/player.js'); ?>"></script>
-    <script type="text/javascript" src="<?= getCacheUrl('js/actor/physical_actor.js'); ?>"></script>
-    <script type="text/javascript" src="<?= getCacheUrl('js/actor/living_actor.js'); ?>"></script>
-    <script type="text/javascript" src="<?= getCacheUrl('js/actor/bug/mantis.js'); ?>"></script>
+    <script type="text/javascript" src="<?= getCacheUrl('js/world/world.js'); ?>"></script>
+    <script type="text/javascript" src="<?= getCacheUrl('js/entity/entity.js'); ?>"></script>
+    <script type="text/javascript" src="<?= getCacheUrl('js/entity/brain/brain.js'); ?>"></script>
+    <script type="text/javascript" src="<?= getCacheUrl('js/entity/brain/player.js'); ?>"></script>
+    <script type="text/javascript" src="<?= getCacheUrl('js/entity/physical_entity.js'); ?>"></script>
+    <script type="text/javascript" src="<?= getCacheUrl('js/entity/living_entity.js'); ?>"></script>
+    <script type="text/javascript" src="<?= getCacheUrl('js/entity/bug/mantis.js'); ?>"></script>
     <script type="text/javascript">
         document.addEventListener('DOMContentLoaded', onReady, false);
     </script>

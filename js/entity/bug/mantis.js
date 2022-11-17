@@ -1,7 +1,7 @@
 /**
- * A mantis actor.
+ * A mantis entity.
  */
-class Mantis extends LivingActor {
+class Mantis extends LivingEntity {
     draw(context) {
         let location = this.getLocation();
         context.strokeStyle = 'green';
