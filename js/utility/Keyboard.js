@@ -1,7 +1,7 @@
 /**
  * Tracks keyboard input
  */
-class Keyboard {
+export class Keyboard {
     #pressed = {};
 
     onKeyUp(key) {

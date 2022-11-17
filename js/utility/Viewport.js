@@ -1,7 +1,7 @@
 /**
  * Represents a specific view of a Stage that gets rendered to an HTML Canvas.
  */
-class Viewport {
+export class Viewport {
     #canvas = null;
     #context = null;
     #world = null;

@@ -1,7 +1,9 @@
+import {PhysicalEntity} from './PhysicalEntity.js';
+
 /**
  * An entity that has animated parts and can move around.
  */
-class LivingEntity extends PhysicalEntity {
+export class LivingEntity extends PhysicalEntity {
     #brain = null;
 
     setBrain(brain) {

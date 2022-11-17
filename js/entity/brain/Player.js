@@ -1,7 +1,10 @@
+import {Brain} from './Brain.js';
+import {Vector} from '../../utility/Vector.js';
+
 /**
  * A brain that gets its inputs from a player.
  */
-class Player extends Brain {
+export class Player extends Brain {
     #keyboard;
     #direction = new Vector();
 

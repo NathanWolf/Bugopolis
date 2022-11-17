@@ -4,7 +4,7 @@
  *
  * Can be paused, will act as if the timer is continuing but won't run repeatedly while paused.
  */
-class Timer {
+export class Timer {
     #id = null;
     #callback = null;
     #interval = 0;

@@ -1,7 +1,9 @@
+import {LivingEntity} from '../LivingEntity.js';
+
 /**
  * A mantis entity.
  */
-class Mantis extends LivingEntity {
+export class Mantis extends LivingEntity {
     draw(context) {
         let location = this.getLocation();
         context.strokeStyle = 'green';

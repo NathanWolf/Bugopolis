@@ -1,7 +1,9 @@
+import {Vector} from '../../utility/Vector.js';
+
 /**
  * An abstract brain that controls a LivingEntity.
  */
-class Brain {
+export class Brain {
     getDirection() {
         return Vector.NONE;
     }

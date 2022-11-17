@@ -1,7 +1,7 @@
 /**
  * Manages a collection of Entities that get ticked and may get rendered to a Viewport.
  */
-class World extends Region {
+export class World {
     #entities = [];
 
     getEntitiesInView(viewport) {

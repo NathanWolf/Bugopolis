@@ -3,7 +3,7 @@
  *
  * This can represent a location or a direction in 2-D space
  */
-class Vector {
+export class Vector {
     static NONE = new Vector();
 
     #x;

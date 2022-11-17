@@ -3,7 +3,7 @@
  *
  * These may be rendered to a Viewport if they are in view.
  */
-class Entity {
+export class Entity {
     draw(context) { }
     tick() { }
 }
