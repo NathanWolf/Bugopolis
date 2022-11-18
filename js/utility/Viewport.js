@@ -1,7 +1,11 @@
+import {Vector} from './Vector.js';
+
 /**
  * Represents a specific view of a Stage that gets rendered to an HTML Canvas.
  */
 export class Viewport {
+    #center = new Vector();
+    #scale = 1;
     #canvas = null;
     #context = null;
     #world = null;
@@ -42,10 +46,15 @@ export class Viewport {
         context.globalCompositeOperation = 'destination-over';
         context.clearRect(0, 0, this.#canvas.width, this.#canvas.height);
 
-        // Render all entities in view
-        if (this.#world == null) return;
-
-        let entities = this.#world.getEntitiesInView(this);
-        entities.forEach(function(entity) { entity.draw(context); });
+        // Render the world
+        if (this.#world != null) {
+            let center = new Vector(this.#canvas.width / 2 + this.#center.getX(), this.#canvas.height / 2 + this.#center.getY())
+            context.save();
+            context.translate(center.getX(), center.getY());
+            // Invert Y-axis so positive is up
+            context.scale(this.#scale, -this.#scale);
+            this.#world.draw(context);
+            context.restore();
+        }
     }
 }

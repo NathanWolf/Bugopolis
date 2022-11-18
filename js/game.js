@@ -1,7 +1,9 @@
 import {Viewport} from './utility/Viewport.js';
 import {Keyboard} from './utility/Keyboard.js';
 import {Timer} from './utility/Timer.js';
+import {Vector} from './utility/Vector.js';
 import {World} from './world/World.js';
+import {Block} from './world/Block.js';
 import {Player} from './entity/brain/Player.js';
 import {Mantis} from './entity/bug/Mantis.js';
 
@@ -25,9 +27,12 @@ export class Game {
         let player = new Player();
         player.setKeyboard(this.#keyboard);
         let playerMantis = new Mantis();
-        playerMantis.getLocation().setY(100);
+        playerMantis.getLocation().setY(20);
         playerMantis.setBrain(player);
         this.#world.addEntity(playerMantis);
+
+        // Set up some hard-coded blocks
+        this.#world.addBlock(new Block(new Vector(0, 0)));
 
         // Set up tick loop
         let game = this;
